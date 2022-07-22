@@ -1,7 +1,16 @@
+body{
+    background-color: #00C5FF;
+}
+
 h1 {
     display: flex;
     font-size: 50px;
     color: #008fc6;
     font-family: "monaco";
+    justify-content: center;
+}
+
+main {
+    display: flex;
     justify-content: center;
 }
