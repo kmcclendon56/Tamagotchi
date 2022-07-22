@@ -39,9 +39,19 @@ main {
     top: 8px;
     right: 130px;
     font-size: 50px;
+    color: #C8F7FF;
 }
 
 main, img {
     position: relative;
     text-align: center;
+}
+
+#xs {
+    display: flex;
+    position: absolute;
+    top: 8px;
+    left: 130px;
+    font-size: 50px;
+    color: #C8F7FF;
 }
