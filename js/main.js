@@ -1,9 +1,9 @@
 /*----- constants -----*/
-const food;
-const toy;
-const bed;
-const coat;
-const fan;
+// const food;
+// const toy;
+// const bed;
+// const coat;
+// const fan;
 
 
 /*----- app's state (variables) -----*/
