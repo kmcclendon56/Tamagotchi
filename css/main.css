@@ -1,3 +1,10 @@
+* {
+    position:relative;
+    box-sizing:border-box;
+    margin:0;
+    padding:0;
+}
+
 body{
     background-color: #00C5FF;
 }
@@ -24,4 +31,17 @@ main {
     display: flex;
     justify-content: space-around;
     flex-direction: row-reverse;
+}
+
+#score {
+    display: flex;
+    position: absolute;
+    top: 8px;
+    right: 130px;
+    font-size: 50px;
+}
+
+main, img {
+    position: relative;
+    text-align: center;
 }
