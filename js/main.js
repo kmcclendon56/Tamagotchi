@@ -15,8 +15,23 @@ const scoreEl = document.querySelector('.scoreBox');
 const xEl = document.querySelector('.Xs');
 
 /*----- event listeners -----*/
-document.querySelector('button')
-    .addEventListener('click', needMet);
+document.querySelector('.foodbutton')
+    .addEventListener('click', foodNeedMet);
+
+document.querySelector('.toybutton')
+    .addEventListener('click', toyNeedMet);
+
+document.querySelector('.bedbutton')
+    .addEventListener('click', bedNeedMet);
+
+document.querySelector('.coatbutton')
+    .addEventListener('click', coatNeedMet);
+
+document.querySelector('.fanbutton')
+    .addEventListener('click', fanNeedMet);
+
+document.querySelector('.replaybutton')
+    .addEventListener('click', replay);
 
 /*----- functions -----*/
 //initial function for start of game
@@ -25,7 +40,27 @@ function init(){
 }
 
 //function for meeting needs
-function needMet(){
+function foodNeedMet(){
+
+}
+
+function toyNeedMet(){
+
+}
+
+function bedNeedMet(){
+
+}
+
+function coatNeedMet(){
+
+}
+
+function fanNeedMet(){
+
+}
+
+function replay(){
 
 }
 
