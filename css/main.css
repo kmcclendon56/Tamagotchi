@@ -23,7 +23,7 @@ h1 {
 main {
     display: flex;
     justify-content: center;
-    left: 100px;
+    left: 700px;
 }
 
 .Buttons * {
@@ -50,7 +50,7 @@ main {
     color: #C8F7FF;
 }
 
-main, img {
+.picture {
     display: flex;
     position: relative;
     justify-content: center;
@@ -63,7 +63,7 @@ main, img {
     top: 8px;
     left: 150px;
     font-size: 50px;
-    color: #C8F7FF;
+    color: red;
 }
 
 #displayNeed {
@@ -82,32 +82,31 @@ main, img {
 }
 
 .snow {
-    display: none;
-    top: 150px;
-    right: 850px;
+    visibility: hidden;
+    right: 750px;
 }
 
 .fire {
-    display: none;
-    top: 250px;
-    right: 800px;
+    visibility: hidden;
+    right: 1100px;
 }
 
 .sleep {
-    display: none;
-    top: 50px;
-    right: 900px;
+    visibility: hidden;
+    top: -150px;
+    right: 1500px;
 }
 
 .bored {
-    display: none;
-    right: 800px;
+    visibility: hidden;
+    right: 1557px;
+    top: -125px;
 }
 
 .hunger {
-    display: none;
+    visibility: hidden;
     top: 350px;
-    right: 650px;
+    right: 1730px;
     height: 30px;
     width: 30px;
 }
