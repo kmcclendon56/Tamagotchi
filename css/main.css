@@ -62,3 +62,9 @@ main, img {
     right: 425px;
     align-items: flex-start;
 }
+
+footer{
+    display: flex;
+    top: 50px;
+    left: 425px;
+}
