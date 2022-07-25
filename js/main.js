@@ -15,22 +15,22 @@ const xEl = document.querySelector('.Xs');
 
 
 /*----- event listeners -----*/
-document.querySelector('.foodbutton')
+document.querySelector('.foodButton')
     .addEventListener('click', foodNeedMet);
 
-document.querySelector('.toybutton')
+document.querySelector('.toyButton')
     .addEventListener('click', toyNeedMet);
 
-document.querySelector('.bedbutton')
+document.querySelector('.bedButton')
     .addEventListener('click', bedNeedMet);
 
-document.querySelector('.coatbutton')
+document.querySelector('.coatButton')
     .addEventListener('click', coatNeedMet);
 
-document.querySelector('.fanbutton')
+document.querySelector('.fanButton')
     .addEventListener('click', fanNeedMet);
 
-document.querySelector('.replaybutton')
+document.querySelector('.replayButton')
     .addEventListener('click', replay);
 
 
