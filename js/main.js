@@ -1,10 +1,12 @@
 /*----- constants -----*/
-const needs = [food, toy, bed, coat, fan];
+const needs = ["food", "toy", "bed", "coat", "fan"];
 
 /*----- app's state (variables) -----*/
 let score = 0;
+let xCount = 0;
 let win;
 let lose;
+let currentNeed;
 
 
 /*----- cached element references -----*/
@@ -40,56 +42,95 @@ init()
 /*----- functions -----*/
 //initial function for start of game
 function init(){
-
-}
-
-//function for meeting needs
-function init(){
     //set initial values
     score = 0;
     winner = null;
-
+    currentNeed = randomNeed();
+    console.log(`Your friend needs ${currentNeed}!`);
     render()
 }
 
 function render(){
+    // Show need?
     scoreEl.innerText = score;
 }
 
 function randomNeed() {
-    Math.floor(Math.random(needs));
-    return needs;
+   let needIndex = Math.floor(Math.random() * 5);
+    return needs[needIndex];
 }
 
-function foodNeedMet(){
-    if(randomNeed === food){
-        console.log("Your friend is hungry!");
+function plusScore(){
+    if(score === 3){
+        renderWinner()
     }
-    if()
+    else{
+        score += 1;
+        currentNeed = randomNeed();
+    }
+    render()
+}
+
+function minusScore(){
+    if(xCount === 3){
+        renderLoss()
+    }
+    else{
+        xCount += 1;
+        currentNeed = randomNeed();
+    }
+    render()
+}
+
+//function for meeting needs
+function foodNeedMet(){
+    // or needs[0]
+    if(currentNeed === "food"){
+        plusScore();
+    } else {
+        minusScore()
+    }
 }
 
 function toyNeedMet(){
-
+    if(currentNeed === "toy"){
+        plusScore();
+    } else {
+        minusScore()
+    }
 }
 
 function bedNeedMet(){
-
+    if(currentNeed === "bed"){
+        plusScore();
+    } else {
+        minusScore()
+    }
 }
 
 function coatNeedMet(){
-
+    if(currentNeed === "coat"){
+        plusScore();
+    } else {
+        minusScore()
+    }
 }
 
 function fanNeedMet(){
-
+    if(currentNeed === "fan"){
+        plusScore();
+    } else {
+        minusScore()
+    }
 }
 
 function replay(){
-
+    init();
 }
 
 //render functions
 //winner function will show a gif of fireworks over screen
+//
 function renderWinner(){
 
 }
@@ -98,10 +139,3 @@ function renderWinner(){
 function renderLoss(){
 
 }
-
-//Belongs in a function probably???
-let food = console.log ("Your friend is hungry!");
-let toy = console.log("Your friend is bored!");
-let bed = console.log("Your friend is tired!");
-let coat = console.log("Your friend is cold!");
-let fan = console.log("Your friend is hot!");
