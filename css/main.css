@@ -77,8 +77,9 @@ main {
 .replayButton{
     display: flex;
     padding: 15px 32px;
-    text-align: center;
-    text-decoration: none;
+    width: 5%;
+    background-color: #008fc6;
+    left: 475px;
 }
 
 .snow {
