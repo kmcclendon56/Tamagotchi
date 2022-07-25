@@ -80,3 +80,34 @@ main, img {
     text-align: center;
     text-decoration: none;
 }
+
+.snow {
+    display: none;
+    top: 150px;
+    right: 850px;
+}
+
+.fire {
+    display: none;
+    top: 250px;
+    right: 800px;
+}
+
+.sleep {
+    display: none;
+    top: 50px;
+    right: 900px;
+}
+
+.bored {
+    display: none;
+    right: 800px;
+}
+
+.hunger {
+    display: none;
+    top: 350px;
+    right: 650px;
+    height: 30px;
+    width: 30px;
+}
