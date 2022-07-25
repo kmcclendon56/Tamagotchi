@@ -25,7 +25,9 @@ main {
 .Buttons * {
     background-color: #C8F7FF;
     font-size: 30px;
+    transition-duration: 0.4s;
 }
+
 
 .Buttons{
     display: flex;
@@ -63,8 +65,10 @@ main, img {
     align-items: flex-start;
 }
 
-footer{
+
+.replayButton{
     display: flex;
-    top: 50px;
-    left: 425px;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
 }
