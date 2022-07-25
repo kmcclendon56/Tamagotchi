@@ -6,7 +6,10 @@
 }
 
 body{
+    display: flex;
     background-color: #00C5FF;
+    justify-content: center;
+    flex-direction: column;
 }
 
 h1 {
@@ -20,19 +23,22 @@ h1 {
 main {
     display: flex;
     justify-content: center;
+    left: 100px;
 }
 
 .Buttons * {
     background-color: #C8F7FF;
     font-size: 30px;
+    border-radius: 30px;
     transition-duration: 0.4s;
 }
 
 
-.Buttons{
+.Buttons {
     display: flex;
-    justify-content: space-around;
-    flex-direction: row-reverse;
+    justify-content: space-evenly;
+    flex-direction: row;
+
 }
 
 #score {
@@ -45,23 +51,25 @@ main {
 }
 
 main, img {
+    display: flex;
     position: relative;
-    text-align: center;
+    justify-content: center;
+    align-items: flex-start;
 }
 
 #xs {
     display: flex;
     position: absolute;
     top: 8px;
-    left: 130px;
+    left: 150px;
     font-size: 50px;
     color: #C8F7FF;
 }
 
-#randomNeed {
+#displayNeed {
     display: flex;
     top: 100px;
-    right: 425px;
+    right: 500px;
     align-items: flex-start;
 }
 
