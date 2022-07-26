@@ -2,6 +2,7 @@
 const needs = ["food", "a toy", "a bed", "a coat", "a fan"];
 const xArray = ["X", "X", "X"];
 
+
 /*----- app's state (variables) -----*/
 let score = 0;
 let xCount = 0;
@@ -56,14 +57,15 @@ function init(){
     winner = null;
     randomNeed();
     console.log(`Your friend needs ${currentNeed}!`);
-
     render()
 }
+
 
 //function to change score count
 function render(){
     scoreEl.innerText = score;
 }
+
 
 //function to get random need
 function randomNeed() {
@@ -86,9 +88,10 @@ function randomNeed() {
     }    
 }
 
+
 //Function for scoreing
 function plusScore(){
-    if(score === 3){
+    if(score === 2){
         renderWinner();
     }
     else{
@@ -99,15 +102,14 @@ function plusScore(){
     render()
 }
 
+
 //Function for loss
 function minusScore(){
-    if(xCount === 3){
+    if(xCount === 2){
         renderLoss();
     }
     else{
         xCount += 1;
-        //xEl.style.color = "red";
-        randomNeed();
     }
     render()
 }
@@ -125,7 +127,6 @@ function showFireGif() {
 function showSleepGif() {
     sleepGifEl.style.visibility = 'visible';
 }
-
 function showBoredGif() {
     boredGifEl.style.visibility = 'visible';
 }
@@ -147,7 +148,6 @@ function foodNeedMet(){
     }
     render()
 }
-
 function toyNeedMet(){
     if(currentNeed === "a toy"){
         plusScore();
@@ -158,7 +158,6 @@ function toyNeedMet(){
     render()
 
 }
-
 function bedNeedMet(){
     if(currentNeed === "a bed"){
         plusScore();
@@ -167,9 +166,7 @@ function bedNeedMet(){
         minusScore();
     }
     render()
-
 }
-
 function coatNeedMet(){
     if(currentNeed === "a coat"){
         plusScore();
@@ -178,9 +175,7 @@ function coatNeedMet(){
         minusScore();
     }
     render()
-
 }
-
 function fanNeedMet(){
     if(currentNeed === "a fan"){
         plusScore();
@@ -189,19 +184,35 @@ function fanNeedMet(){
         minusScore();
     }
     render()
-
 }
 
-function replay(){
-    init();
-    render()
+
+//X function
+function showX() {
+   for(i = 0; i < xArray.length; i++){
+    if(xCount === 1){
+        console.log(xArray[i]);
+    }
+    else if(xCount === 2){
+        console.log(xArray[i]);
+   }
+   else {
+    console.log(xArray[i]);
+   }
 }
+}
+
 
 //render functions
 //winner function will show a gif of fireworks over screen
 function renderWinner(){
-    if(score === 3){
+    if(score === 2){
         showFireworksGif();
+        fireGifEl.style.visibility = 'hidden';
+        snowGifEl.style.visibility = 'hidden';
+        boredGifEl.style.visibility = 'hidden';
+        hungerGifEl.style.visibility = 'hidden';
+        sleepGifEl.style.visibility = 'hidden';
     }
     else{
         fireworksGifEl.style.visibility = 'hidden';
@@ -209,13 +220,29 @@ function renderWinner(){
     render()
 }
 
+
 //loss function will show gif of rip over screen
 function renderLoss(){
-    if(xCount === 3){
+    if(xCount === 2){
         showRipGif();
+        fireGifEl.style.visibility = 'hidden';
+        snowGifEl.style.visibility = 'hidden';
+        boredGifEl.style.visibility = 'hidden';
+        hungerGifEl.style.visibility = 'hidden';
+        sleepGifEl.style.visibility = 'hidden';
     }
     else {
         ripGifEl.style.visibility = 'hidden';
     }
     render()
+}
+
+
+//Replay function
+function replay(){
+    init();
+    fireworksGifEl.style.visibility = 'hidden';
+    ripGifEl.style.visibility = 'hidden';
+    render()
+
 }
