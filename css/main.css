@@ -30,9 +30,11 @@ main {
     background-color: #C8F7FF;
     font-size: 30px;
     border-radius: 30px;
-    transition-duration: 0.4s;
 }
 
+.Buttons:hover {
+    color: #008fc6;
+}
 
 .Buttons {
     display: flex;
@@ -74,12 +76,18 @@ main {
 }
 
 
-.replayButton{
+#replayButton{
     display: flex;
-    padding: 15px 32px;
+    padding: 15px 32px; 
+    font-size: larger;
     width: 5%;
+    border: 20px bold black;
+    left: 270px; 
+    justify-content: center;
+}
+
+#replayButton:hover {
     background-color: #008fc6;
-    left: 475px;
 }
 
 .snow {

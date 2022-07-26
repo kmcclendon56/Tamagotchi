@@ -37,7 +37,7 @@ document.querySelector('.coatButton')
 document.querySelector('.fanButton')
     .addEventListener('click', fanNeedMet);
 
-document.querySelector('.replayButton')
+document.getElementById('replayButton')
     .addEventListener('click', replay);
 
 

@@ -13,7 +13,18 @@
     <main>
         <img src='https://i.imgur.com/LGln5TM.gif' class='picture'>
         <h4 id="xs"></h4>
-        <h4 id="displayNeed">"Your friend needs ${currentNeed}!"</h4>
+        <!-- fix this -->
+        <!-- <script type = "text/javascript">
+            function randomNeed() {<h2>(`Your friend needs ${currentNeed}!`);</h2>}</script> -->
+            <script>
+                needs = ["food", "a toy", "a bed", "a coat", "a fan"];
+                needIndex = Math.floor(Math.random() * 5);
+                currentNeed = needs[needIndex];
+                function randomNeed() {
+                    document.write(`<h1>Your friend needs ${currentNeed}!</h1>`);
+                }
+                randomNeed();
+            </script>
         <img src="https://i.imgur.com/3QtRolb.gif" class="snow">
         <img src="https://i.imgur.com/mMQgVgz.gif" class="fire">
         <img src="https://i.imgur.com/2LJx082.gif" class="sleep">
@@ -49,8 +60,8 @@
             </button>
         </div>
     </div>
-    <h1 class="replayButton">
-        <button type="button">Play</button>
-    </h1>
+    <div id="replayButton">
+        <button style="background-color: #008fc6;">Play</button>
+    </div>
 </body>
 </html>
