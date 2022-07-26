@@ -60,10 +60,12 @@ function init(){
     render()
 }
 
+//function to change score count
 function render(){
     scoreEl.innerText = score;
 }
 
+//function to get random need
 function randomNeed() {
    let needIndex = Math.floor(Math.random() * 5);
    currentNeed = needs[needIndex];
@@ -84,6 +86,7 @@ function randomNeed() {
     }    
 }
 
+//Function for scoreing
 function plusScore(){
     if(score === 3){
         renderWinner();
@@ -96,6 +99,7 @@ function plusScore(){
     render()
 }
 
+//Function for loss
 function minusScore(){
     if(xCount === 3){
         renderLoss();
@@ -111,32 +115,25 @@ function minusScore(){
 //Show hidden gifs functions
 function showHungerGif() {
     hungerGifEl.style.visibility = 'visible';
-    //console.log("Hunger");
 }
 function showSnowGif() {
     snowGifEl.style.visibility = 'visible';
-    //console.log("Cold");
 }
 function showFireGif() {
     fireGifEl.style.visibility = 'visible';
-    //console.log("Hot");
 }
 function showSleepGif() {
     sleepGifEl.style.visibility = 'visible';
-    //console.log("Tired");
 }
 
 function showBoredGif() {
     boredGifEl.style.visibility = 'visible';
-    //console.log("Bored");
 }
 function showRipGif() {
     ripGifEl.style.visibility = 'visible';
-    //console.log("Bored");
 }
 function showFireworksGif() {
     fireworksGifEl.style.visibility = 'visible';
-    //console.log("Bored");
 }
 
 
