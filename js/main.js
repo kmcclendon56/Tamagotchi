@@ -18,6 +18,8 @@ const sleepGifEl = document.querySelector('.sleep');
 const fireGifEl = document.querySelector('.fire');
 const snowGifEl = document.querySelector('.snow');
 const hungerGifEl = document.querySelector('.hunger');
+const fireworksGifEl = document.querySelector('.fireworks');
+const ripGifEl = document.querySelector('.rip');
 
 
 
@@ -109,23 +111,32 @@ function minusScore(){
 //Show hidden gifs functions
 function showHungerGif() {
     hungerGifEl.style.visibility = 'visible';
-    console.log("Hunger");
+    //console.log("Hunger");
 }
 function showSnowGif() {
     snowGifEl.style.visibility = 'visible';
-    console.log("Cold");
+    //console.log("Cold");
 }
 function showFireGif() {
     fireGifEl.style.visibility = 'visible';
-    console.log("Hot");
+    //console.log("Hot");
 }
 function showSleepGif() {
     sleepGifEl.style.visibility = 'visible';
-    console.log("Tired");
+    //console.log("Tired");
 }
+
 function showBoredGif() {
     boredGifEl.style.visibility = 'visible';
-    console.log("Bored");
+    //console.log("Bored");
+}
+function showRipGif() {
+    ripGifEl.style.visibility = 'visible';
+    //console.log("Bored");
+}
+function showFireworksGif() {
+    fireworksGifEl.style.visibility = 'visible';
+    //console.log("Bored");
 }
 
 
@@ -186,15 +197,28 @@ function fanNeedMet(){
 
 function replay(){
     init();
+    render()
 }
 
 //render functions
 //winner function will show a gif of fireworks over screen
 function renderWinner(){
-
+    if(score === 3){
+        showFireworksGif();
+    }
+    else{
+        fireworksGifEl.style.visibility = 'hidden';
+    }
+    render()
 }
 
 //loss function will show gif of rip over screen
 function renderLoss(){
-
+    if(xCount === 3){
+        showRipGif();
+    }
+    else {
+        ripGifEl.style.visibility = 'hidden';
+    }
+    render()
 }

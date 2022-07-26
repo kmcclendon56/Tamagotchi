@@ -119,3 +119,11 @@ main {
     height: 30px;
     width: 30px;
 }
+
+.fireworks {
+    visibility: visible;
+}
+
+.rip {
+    visibility: visible;
+}
