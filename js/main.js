@@ -24,6 +24,9 @@ const x1El = document.getElementById('x1');
 const x2El = document.getElementById('x2');
 const x3El = document.getElementById('x3');
 const xArray = [x1El, x2El, x3El];
+const randomNeedEl = document.getElementById('randomNeed');
+const youWinEl = document.getElementById('youWin');
+const youLoseEl = document.getElementById('youLose');
 
 
 
@@ -59,7 +62,6 @@ function init(){
     score = 0;
     winner = null;
     randomNeed();
-    console.log(`Your friend needs ${currentNeed}!`);
     render()
 }
 
@@ -88,7 +90,8 @@ function randomNeed() {
     }
     else{
         showFireGif();
-    }    
+    }   
+    randomNeedEl.innerText = (`Your friend needs ${currentNeed}!`);
 }
 
 
@@ -100,7 +103,6 @@ function plusScore(){
     }
     else{
         randomNeed();
-        console.log(`Your friend needs ${currentNeed}!`);
     }
     render()
 }
@@ -137,6 +139,12 @@ function showRipGif() {
 }
 function showFireworksGif() {
     fireworksGifEl.style.visibility = 'visible';
+}
+function showYouWin() {
+    youWinEl.style.visibility = 'visible';
+}
+function showYouLose() {
+    youLoseEl.style.visibility = 'visible';
 }
 
 
@@ -194,27 +202,6 @@ function showX() {
     xArray[xCount-1].style.visibility = 'visible';
 }
 
-
-//render functions
-//winner function will show a gif of fireworks over screen
-function renderWinner(){
-    // if(score === 3){
-    //     showFireworksGif();
-    //     fireGifEl.style.visibility = 'hidden';
-    //     snowGifEl.style.visibility = 'hidden';
-    //     boredGifEl.style.visibility = 'hidden';
-    //     hungerGifEl.style.visibility = 'hidden';
-    //     sleepGifEl.style.visibility = 'hidden';
-    // }
-    // else{
-    //     fireworksGifEl.style.visibility = 'hidden';
-    // }
-    // render()
-    reset();
-    showFireworksGif();
-    render()
-}
-
 function reset() {
     xCount = 0;
     score = 0;
@@ -226,14 +213,26 @@ function reset() {
     sleepGifEl.style.visibility = 'hidden';
     fireworksGifEl.style.visibility = 'hidden';
     ripGifEl.style.visibility = 'hidden';
+    youWinEl.style.visibility = 'hidden';
+    youLoseEl.style.visibility = 'hidden';
     for (let i=0; i<xArray.length; i++) {
         xArray[i].style.visibility = 'hidden';
     }
 }
 
+//render functions
+//winner function will show a gif of fireworks over screen
+function renderWinner(){
+    reset();
+    showYouWin();
+    showFireworksGif();
+    render()
+}
+
 //loss function will show gif of rip over screen
 function renderLoss(){
     reset();
+    showYouLose();
     showRipGif();
     render()
 }

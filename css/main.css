@@ -47,8 +47,17 @@ main {
     display: flex;
     position: absolute;
     top: 70px;
-    right: 400px;
+    right: 550px;
     font-size: 50px;
+    color: #C8F7FF;
+}
+
+#randomNeed {
+    display: flex;
+    position: absolute;
+    top: 70px;
+    right: 1450px;
+    font-size: 40px;
     color: #C8F7FF;
 }
 
@@ -57,7 +66,7 @@ main {
     position: relative;
     justify-content: center;
     align-items: flex-start;
-    left: 500px;
+    left: 600px;
 }
 
 .xs {
@@ -76,7 +85,7 @@ main {
     flex-direction: row;
     justify-content: space-between;
     top: 8px;
-    left: -350px;
+    left: -90px;
 }
 
 #displayNeed {
@@ -139,4 +148,10 @@ main {
 .rip {
     visibility: hidden;
     right: 300px;
+}
+#youWin {
+    visibility: hidden;
+}
+#youLose {
+    visibility: hidden;
 }
