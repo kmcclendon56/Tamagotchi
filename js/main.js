@@ -1,6 +1,5 @@
 /*----- constants -----*/
 const needs = ["food", "a toy", "a bed", "a coat", "a fan"];
-const xArray = ["X", "X", "X"];
 
 
 /*----- app's state (variables) -----*/
@@ -21,6 +20,10 @@ const snowGifEl = document.querySelector('.snow');
 const hungerGifEl = document.querySelector('.hunger');
 const fireworksGifEl = document.querySelector('.fireworks');
 const ripGifEl = document.querySelector('.rip');
+const x1El = document.getElementById('x1');
+const x2El = document.getElementById('x2');
+const x3El = document.getElementById('x3');
+const xArray = [x1El, x2El, x3El];
 
 
 
@@ -91,11 +94,11 @@ function randomNeed() {
 
 //Function for scoreing
 function plusScore(){
-    if(score === 2){
+    score +=1;
+    if(score === 3){
         renderWinner();
     }
     else{
-        score += 1;
         randomNeed();
         console.log(`Your friend needs ${currentNeed}!`);
     }
@@ -103,13 +106,12 @@ function plusScore(){
 }
 
 
-//Function for loss
+//Function for losing
 function minusScore(){
-    if(xCount === 2){
+    xCount += 1;
+    showX();
+    if(xCount === 3){
         renderLoss();
-    }
-    else{
-        xCount += 1;
     }
     render()
 }
@@ -141,8 +143,8 @@ function showFireworksGif() {
 //functions for meeting needs
 function foodNeedMet(){
     if(currentNeed === "food"){
-        plusScore();
         hungerGifEl.style.visibility = 'hidden';
+        plusScore();
     } else {
         minusScore();
     }
@@ -150,8 +152,8 @@ function foodNeedMet(){
 }
 function toyNeedMet(){
     if(currentNeed === "a toy"){
-        plusScore();
         boredGifEl.style.visibility = 'hidden';
+        plusScore();
     } else {
         minusScore();
     }
@@ -160,8 +162,8 @@ function toyNeedMet(){
 }
 function bedNeedMet(){
     if(currentNeed === "a bed"){
-        plusScore();
         sleepGifEl.style.visibility = 'hidden';
+        plusScore();
     } else {
         minusScore();
     }
@@ -169,8 +171,8 @@ function bedNeedMet(){
 }
 function coatNeedMet(){
     if(currentNeed === "a coat"){
-        plusScore();
         snowGifEl.style.visibility = 'hidden';
+        plusScore();
     } else {
         minusScore();
     }
@@ -178,8 +180,8 @@ function coatNeedMet(){
 }
 function fanNeedMet(){
     if(currentNeed === "a fan"){
-        plusScore();
         fireGifEl.style.visibility = 'hidden';
+        plusScore();
     } else {
         minusScore();
     }
@@ -189,60 +191,58 @@ function fanNeedMet(){
 
 //X function
 function showX() {
-   for(i = 0; i < xArray.length; i++){
-    if(xCount === 1){
-        console.log(xArray[i]);
-    }
-    else if(xCount === 2){
-        console.log(xArray[i]);
-   }
-   else {
-    console.log(xArray[i]);
-   }
-}
+    xArray[xCount-1].style.visibility = 'visible';
 }
 
 
 //render functions
 //winner function will show a gif of fireworks over screen
 function renderWinner(){
-    if(score === 2){
-        showFireworksGif();
-        fireGifEl.style.visibility = 'hidden';
-        snowGifEl.style.visibility = 'hidden';
-        boredGifEl.style.visibility = 'hidden';
-        hungerGifEl.style.visibility = 'hidden';
-        sleepGifEl.style.visibility = 'hidden';
-    }
-    else{
-        fireworksGifEl.style.visibility = 'hidden';
-    }
+    // if(score === 3){
+    //     showFireworksGif();
+    //     fireGifEl.style.visibility = 'hidden';
+    //     snowGifEl.style.visibility = 'hidden';
+    //     boredGifEl.style.visibility = 'hidden';
+    //     hungerGifEl.style.visibility = 'hidden';
+    //     sleepGifEl.style.visibility = 'hidden';
+    // }
+    // else{
+    //     fireworksGifEl.style.visibility = 'hidden';
+    // }
+    // render()
+    reset();
+    showFireworksGif();
     render()
 }
 
+function reset() {
+    xCount = 0;
+    score = 0;
+    currentNeed = null;
+    fireGifEl.style.visibility = 'hidden';
+    snowGifEl.style.visibility = 'hidden';
+    boredGifEl.style.visibility = 'hidden';
+    hungerGifEl.style.visibility = 'hidden';
+    sleepGifEl.style.visibility = 'hidden';
+    fireworksGifEl.style.visibility = 'hidden';
+    ripGifEl.style.visibility = 'hidden';
+    for (let i=0; i<xArray.length; i++) {
+        xArray[i].style.visibility = 'hidden';
+    }
+}
 
 //loss function will show gif of rip over screen
 function renderLoss(){
-    if(xCount === 2){
-        showRipGif();
-        fireGifEl.style.visibility = 'hidden';
-        snowGifEl.style.visibility = 'hidden';
-        boredGifEl.style.visibility = 'hidden';
-        hungerGifEl.style.visibility = 'hidden';
-        sleepGifEl.style.visibility = 'hidden';
-    }
-    else {
-        ripGifEl.style.visibility = 'hidden';
-    }
+    reset();
+    showRipGif();
     render()
 }
 
 
 //Replay function
 function replay(){
+    reset();
     init();
-    fireworksGifEl.style.visibility = 'hidden';
-    ripGifEl.style.visibility = 'hidden';
     render()
 
 }
