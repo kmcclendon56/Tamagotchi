@@ -185,8 +185,7 @@ function fanNeedMet(){
 }
 
 function replay(){
-    //init();
-    randomNeed();
+    init();
 }
 
 //render functions
