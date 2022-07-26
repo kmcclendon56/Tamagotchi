@@ -43,11 +43,11 @@ main {
 
 }
 
-#score {
+.scoreBox {
     display: flex;
     position: absolute;
-    top: 8px;
-    right: 130px;
+    top: 70px;
+    right: 400px;
     font-size: 50px;
     color: #C8F7FF;
 }
@@ -57,15 +57,26 @@ main {
     position: relative;
     justify-content: center;
     align-items: flex-start;
+    left: 500px;
 }
 
-#xs {
-    display: flex;
+.xs {
+    /* display: flex;
     position: absolute;
     top: 8px;
-    left: 150px;
+    right: 450px; */
     font-size: 50px;
     color: red;
+    visibility: hidden;
+}
+
+.xRow {
+    display: flex;
+    position: absolute;
+    flex-direction: row;
+    justify-content: space-between;
+    top: 8px;
+    left: -350px;
 }
 
 #displayNeed {
@@ -82,7 +93,7 @@ main {
     font-size: larger;
     width: 5%;
     border: 20px bold black;
-    left: 270px; 
+    left: 720px; 
     justify-content: center;
 }
 
@@ -92,38 +103,40 @@ main {
 
 .snow {
     visibility: hidden;
-    right: 750px;
+    right: 1300px;
 }
 
 .fire {
     visibility: hidden;
-    right: 1100px;
+    right: 1650px;
 }
 
 .sleep {
     visibility: hidden;
-    top: -150px;
-    right: 1500px;
+    top: -300px;
+    right: 2050px;
 }
 
 .bored {
     visibility: hidden;
-    right: 1557px;
-    top: -125px;
+    right: 2150px;
+    top: -225px;
 }
 
 .hunger {
     visibility: hidden;
-    top: 350px;
-    right: 1730px;
+    top: 470px;
+    right: 2310px;
     height: 30px;
     width: 30px;
 }
 
 .fireworks {
-    visibility: visible;
+    visibility: hidden;
+    right: 900px;
 }
 
 .rip {
-    visibility: visible;
+    visibility: hidden;
+    right: 300px;
 }
