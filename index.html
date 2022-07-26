@@ -12,16 +12,21 @@
     <h1>Tamagotchi</h1>
     <main>
         <img src='https://i.imgur.com/LGln5TM.gif' class='picture'>
-        <h4 id="xs">X X X</h4>
+        <div class="xRow">
+            <h4 id= "x1" class="xs">X</h4>
+            <h4 id= "x2" class="xs">X</h4>
+            <h4 id= "x3" class="xs">X</h4>
+        </div>
+        
             <script>
-                needs = ["food", "a toy", "a bed", "a coat", "a fan"];
-                function randomNeed() {
-                needIndex = Math.floor(Math.random() * 5);
-                currentNeed = needs[needIndex]; }
+                // needs = ["food", "a toy", "a bed", "a coat", "a fan"];
+                // function randomNeed() {
+                // needIndex = Math.floor(Math.random() * 5);
+                // currentNeed = needs[needIndex]; }
                 function currentNeedNeed() {
                     document.write(`<h1>Your friend needs ${currentNeed}!</h1>`);
                  }
-                randomNeed();
+                // randomNeed();
             </script>
         <img src="https://i.imgur.com/tvPW2YD.gif" class="rip">
         <img src="https://i.imgur.com/lngzfSZ.gif" class="fireworks">
