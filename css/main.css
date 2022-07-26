@@ -40,14 +40,13 @@ main {
     display: flex;
     justify-content: space-evenly;
     flex-direction: row;
-
 }
 
 .scoreBox {
     display: flex;
     position: absolute;
     top: 70px;
-    right: 550px;
+    right: 575px;
     font-size: 50px;
     color: #C8F7FF;
 }
@@ -70,10 +69,6 @@ main {
 }
 
 .xs {
-    /* display: flex;
-    position: absolute;
-    top: 8px;
-    right: 450px; */
     font-size: 50px;
     color: red;
     visibility: hidden;
@@ -85,14 +80,7 @@ main {
     flex-direction: row;
     justify-content: space-between;
     top: 8px;
-    left: -90px;
-}
-
-#displayNeed {
-    display: flex;
-    top: 100px;
-    right: 500px;
-    align-items: flex-start;
+    left: -135px;
 }
 
 
@@ -102,7 +90,7 @@ main {
     font-size: larger;
     width: 5%;
     border: 20px bold black;
-    left: 720px; 
+    left: 915px; 
     justify-content: center;
 }
 
@@ -112,46 +100,56 @@ main {
 
 .snow {
     visibility: hidden;
-    right: 1300px;
+    right: 1400px;
 }
 
 .fire {
     visibility: hidden;
-    right: 1650px;
+    right: 1750px;
 }
 
 .sleep {
     visibility: hidden;
     top: -300px;
-    right: 2050px;
+    right: 2150px;
 }
 
 .bored {
     visibility: hidden;
-    right: 2150px;
+    right: 2230px;
     top: -225px;
 }
 
 .hunger {
     visibility: hidden;
     top: 470px;
-    right: 2310px;
+    right: 2385px;
     height: 30px;
     width: 30px;
 }
 
 .fireworks {
     visibility: hidden;
-    right: 900px;
+    right: 1000px;
+    top: 20px;
 }
 
 .rip {
     visibility: hidden;
-    right: 300px;
+    right: 400px;
+    top: -20px;
 }
 #youWin {
     visibility: hidden;
+    left: 165px;
+    top: 140px;
+    font-size: 40px;
+    color: #008fc6;
 }
 #youLose {
     visibility: hidden;
+    left: 50px;
+    top: 700px;
+    font-size: 40px;
+    color: #008fc6;
 }
