@@ -7,7 +7,7 @@
 
 body{
     display: flex;
-    background-color: #00C5FF;
+    background-color: rgb(0, 204, 255);
     justify-content: center;
     flex-direction: column;
     width: 100vw;
@@ -17,7 +17,7 @@ body{
 h1 {
     display: flex;
     font-size: 50px;
-    color: #008fc6;
+    color: #F2B3D6;
     font-family: "monaco";
     justify-content: center;
 }
@@ -44,22 +44,32 @@ main {
     flex-direction: row;
 }
 
+#score{
+    display: flex;
+    font-family: "monaco";
+    font-size: 30px;
+    top: -30px;
+    left: 580px;
+    color: #F2B3D6;
+}
+
 .scoreBox {
     display: flex;
     position: absolute;
     top: 70px;
     right: 575px;
     font-size: 50px;
-    color: #C8F7FF;
+    color: #F2B3D6;
 }
 
 #randomNeed {
     display: flex;
     position: absolute;
     top: 70px;
-    right: 1450px;
-    font-size: 40px;
-    color: #C8F7FF;
+    right: 1455px;
+    font-size: 30px;
+    color: #F2B3D6;
+    font-family: "monaco";
 }
 
 .picture {
@@ -91,23 +101,22 @@ main {
     padding: 15px 32px; 
     font-size: larger;
     width: 5%;
-    border: 20px bold black;
     left: 915px; 
     justify-content: center;
 }
 
 #replayButton:hover {
-    background-color: #008fc6;
+    background-color: #F2B3D6;
 }
 
 .snow {
     visibility: hidden;
-    right: 1400px;
+    right: 1450px;
 }
 
 .fire {
     visibility: hidden;
-    right: 1750px;
+    right: 1800px;
 }
 
 .sleep {
@@ -118,39 +127,37 @@ main {
 
 .bored {
     visibility: hidden;
-    right: 2230px;
+    right: 2300px;
     top: -225px;
 }
 
 .hunger {
     visibility: hidden;
     top: 470px;
-    right: 2385px;
+    right: 2480px;
     height: 30px;
     width: 30px;
 }
 
 .fireworks {
     visibility: hidden;
-    right: 1000px;
-    top: 20px;
+    right: 1050px;
 }
 
 .rip {
     visibility: hidden;
-    right: 400px;
+    right: 425px;
     top: -20px;
 }
 #youWin {
     visibility: hidden;
-    left: 165px;
+    left: 80px;
     top: 140px;
     font-size: 40px;
     color: #008fc6;
 }
 #youLose {
     visibility: hidden;
-    left: 50px;
     top: 700px;
     font-size: 40px;
     color: #008fc6;
