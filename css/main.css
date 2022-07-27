@@ -19,7 +19,6 @@ h1 {
     font-size: 50px;
     color: #F2B3D6;
     font-family: "monaco";
-    justify-content: center;
     padding:0;
     top: 30px;
 }
@@ -54,8 +53,7 @@ main {
     display: flex;
     font-family: "monaco";
     font-size: 30px;
-    top: -30px;
-    left: 580px;
+    left: 650px;
     color: #F2B3D6;
     padding:0;
 }
@@ -64,7 +62,7 @@ main {
     display: flex;
     position: absolute;
     top: 70px;
-    right: 610px;
+    right: 550px;
     font-size: 50px;
     color: #F2B3D6;
     padding:0;
@@ -73,7 +71,7 @@ main {
 #randomNeed {
     display: flex;
     position: absolute;
-    top: 70px;
+    top: 50px;
     right: 1455px;
     font-size: 30px;
     color: #F2B3D6;
