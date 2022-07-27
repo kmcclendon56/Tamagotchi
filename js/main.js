@@ -223,6 +223,7 @@ function reset() {
 //render functions
 //winner function will show a gif of fireworks over screen
 function renderWinner(){
+    randomNeedEl.innerText = "";
     reset();
     showYouWin();
     showFireworksGif();
@@ -231,6 +232,7 @@ function renderWinner(){
 
 //loss function will show gif of rip over screen
 function renderLoss(){
+    randomNeedEl.innerText = "";
     reset();
     showYouLose();
     showRipGif();

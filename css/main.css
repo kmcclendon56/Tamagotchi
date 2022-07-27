@@ -57,7 +57,7 @@ main {
     display: flex;
     position: absolute;
     top: 70px;
-    right: 575px;
+    right: 610px;
     font-size: 50px;
     color: #F2B3D6;
 }
@@ -77,7 +77,7 @@ main {
     position: relative;
     justify-content: center;
     align-items: flex-start;
-    left: 600px;
+    left: 700px;
 }
 
 .xs {
@@ -134,7 +134,7 @@ main {
 .hunger {
     visibility: hidden;
     top: 470px;
-    right: 2480px;
+    right: 2460px;
     height: 30px;
     width: 30px;
 }
@@ -146,19 +146,21 @@ main {
 
 .rip {
     visibility: hidden;
-    right: 425px;
+    right: 445px;
     top: -20px;
 }
 #youWin {
     visibility: hidden;
-    left: 80px;
-    top: 140px;
-    font-size: 40px;
+    left: 150px;
+    top: 50px;
+    font-size: 60px;
     color: #008fc6;
+    font-family: "monaco";
 }
 #youLose {
     visibility: hidden;
     top: 700px;
     font-size: 40px;
     color: #008fc6;
+    font-family: "monaco";
 }
