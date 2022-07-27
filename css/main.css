@@ -10,6 +10,8 @@ body{
     background-color: #00C5FF;
     justify-content: center;
     flex-direction: column;
+    width: 100vw;
+    height: 100vh;
 }
 
 h1 {
