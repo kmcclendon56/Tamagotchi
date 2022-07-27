@@ -123,7 +123,6 @@ main {
     justify-content: center;
 }
 
-
 #replayButton{
     display: flex;
     padding: 10px; 
@@ -184,6 +183,7 @@ main {
     top: -20px;
     padding:0;
 }
+
 #youWin {
     visibility: hidden;
     left: 150px;
@@ -193,6 +193,7 @@ main {
     font-family: "monaco";
     padding:0;
 }
+
 #youLose {
     visibility: hidden;
     top: 700px;
