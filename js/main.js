@@ -28,7 +28,6 @@ const randomNeedEl = document.getElementById('randomNeed');
 const youWinEl = document.getElementById('youWin');
 const youLoseEl = document.getElementById('youLose');
 const audioEl = document.querySelector("audio");
-audioEl.volume = 0.2;
 
 
 
@@ -51,7 +50,11 @@ document.querySelector('.fanButton')
 document.getElementById('replayButton')
     .addEventListener('click', replay);
 
+document.getElementById('musicButton')
+    .addEventListener('click', playAudio)
 
+document.getElementById('musicOffButton')
+    .addEventListener('click', pauseAudio)
 
 //Invoke the init function
 init()
@@ -64,7 +67,6 @@ function init(){
     score = 0;
     winner = null;
     randomNeed();
-    audioEl.play();
     render()
 }
 
@@ -109,6 +111,16 @@ function plusScore(){
     render()
 }
 
+//Function for playing music
+function playAudio(){
+    audioEl.play();
+    audioEl.volume = 0.2;
+}
+
+//Function for pausing music
+function pauseAudio(){
+    audioEl.pause();
+}
 
 //Function for losing
 function minusScore(){
@@ -197,7 +209,6 @@ function fanNeedMet(){
     }
     render()
 }
-
 
 //X function
 function showX() {

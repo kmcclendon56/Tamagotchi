@@ -2,7 +2,6 @@
     position:relative;
     box-sizing:border-box;
     margin:0;
-    padding:0;
 }
 
 body{
@@ -12,6 +11,7 @@ body{
     flex-direction: column;
     width: 100vw;
     height: 100vh;
+    padding:0;
 }
 
 h1 {
@@ -20,28 +20,34 @@ h1 {
     color: #F2B3D6;
     font-family: "monaco";
     justify-content: center;
+    padding:0;
+    top: 30px;
 }
 
 main {
     display: flex;
     justify-content: center;
     left: 700px;
+    padding:0;
 }
 
 .Buttons * {
     background-color: #C8F7FF;
     font-size: 30px;
     border-radius: 30px;
+    padding:0;
 }
 
 .Buttons:hover {
     color: #008fc6;
+    padding:0;
 }
 
 .Buttons {
     display: flex;
     justify-content: space-evenly;
     flex-direction: row;
+    padding:0;
 }
 
 #score{
@@ -51,6 +57,7 @@ main {
     top: -30px;
     left: 580px;
     color: #F2B3D6;
+    padding:0;
 }
 
 .scoreBox {
@@ -60,6 +67,7 @@ main {
     right: 610px;
     font-size: 50px;
     color: #F2B3D6;
+    padding:0;
 }
 
 #randomNeed {
@@ -70,6 +78,7 @@ main {
     font-size: 30px;
     color: #F2B3D6;
     font-family: "monaco";
+    padding:0;
 }
 
 .picture {
@@ -78,12 +87,14 @@ main {
     justify-content: center;
     align-items: flex-start;
     left: 700px;
+    padding:0;
 }
 
 .xs {
     font-size: 50px;
     color: red;
     visibility: hidden;
+    padding:0;
 }
 
 .xRow {
@@ -93,14 +104,33 @@ main {
     justify-content: space-between;
     top: 8px;
     left: -135px;
+    padding:0;
+}
+
+#musicButton {
+    display: flex;
+    padding: 10px; 
+    width: 5%;
+    top: -250px;
+    left: 250px; 
+    justify-content: center;
+}
+
+#musicOffButton {
+    display: flex;
+    padding: 10px; 
+    width: 5%;
+    top: -250px;
+    left: 250px; 
+    justify-content: center;
 }
 
 
 #replayButton{
     display: flex;
-    padding: 15px 32px; 
-    font-size: larger;
+    padding: 10px; 
     width: 5%;
+    top: 5px;
     left: 915px; 
     justify-content: center;
 }
@@ -112,23 +142,27 @@ main {
 .snow {
     visibility: hidden;
     right: 1450px;
+    padding:0;
 }
 
 .fire {
     visibility: hidden;
     right: 1800px;
+    padding:0;
 }
 
 .sleep {
     visibility: hidden;
     top: -300px;
     right: 2150px;
+    padding:0;
 }
 
 .bored {
     visibility: hidden;
     right: 2300px;
     top: -225px;
+    padding:0;
 }
 
 .hunger {
@@ -137,17 +171,20 @@ main {
     right: 2460px;
     height: 30px;
     width: 30px;
+    padding:0;
 }
 
 .fireworks {
     visibility: hidden;
     right: 1050px;
+    padding:0;
 }
 
 .rip {
     visibility: hidden;
     right: 445px;
     top: -20px;
+    padding:0;
 }
 #youWin {
     visibility: hidden;
@@ -156,6 +193,7 @@ main {
     font-size: 60px;
     color: #008fc6;
     font-family: "monaco";
+    padding:0;
 }
 #youLose {
     visibility: hidden;
@@ -163,4 +201,5 @@ main {
     font-size: 40px;
     color: #008fc6;
     font-family: "monaco";
+    padding:0;
 }
