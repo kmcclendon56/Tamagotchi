@@ -27,6 +27,8 @@ const xArray = [x1El, x2El, x3El];
 const randomNeedEl = document.getElementById('randomNeed');
 const youWinEl = document.getElementById('youWin');
 const youLoseEl = document.getElementById('youLose');
+const audioEl = document.querySelector("audio");
+audioEl.volume = 0.2;
 
 
 
@@ -62,6 +64,7 @@ function init(){
     score = 0;
     winner = null;
     randomNeed();
+    audioEl.play();
     render()
 }
 
@@ -93,7 +96,6 @@ function randomNeed() {
     }   
     randomNeedEl.innerText = (`Your friend needs ${currentNeed}!`);
 }
-
 
 //Function for scoreing
 function plusScore(){
@@ -242,8 +244,8 @@ function renderLoss(){
 
 //Replay function
 function replay(){
+    randomNeed();
     reset();
     init();
     render()
-
 }
