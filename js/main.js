@@ -27,7 +27,7 @@ const xArray = [x1El, x2El, x3El];
 const randomNeedEl = document.getElementById('randomNeed');
 const youWinEl = document.getElementById('youWin');
 const youLoseEl = document.getElementById('youLose');
-const audioEl = document.querySelector("audio");
+const audioEl = document.querySelector('audio');
 
 
 
@@ -56,11 +56,12 @@ document.getElementById('musicButton')
 document.getElementById('musicOffButton')
     .addEventListener('click', pauseAudio)
 
+
+/*----- functions -----*/
 //Invoke the init function
 init()
 
 
-/*----- functions -----*/
 //initial function for start of game
 function init(){
     //set initial values
@@ -81,16 +82,16 @@ function render(){
 function randomNeed() {
    let needIndex = Math.floor(Math.random() * 5);
    currentNeed = needs[needIndex];
-   if(currentNeed === "food"){
+   if(currentNeed === 'food'){
     showHungerGif();
     }
-    else if(currentNeed === "a bed"){
+    else if(currentNeed === 'a bed'){
         showSleepGif();
     }
-    else if(currentNeed === "a toy"){
+    else if(currentNeed === 'a toy'){
         showBoredGif();
     }
-    else if(currentNeed === "a coat"){
+    else if(currentNeed === 'a coat'){
         showSnowGif();
     }
     else{
@@ -164,7 +165,7 @@ function showYouLose() {
 
 //functions for meeting needs
 function foodNeedMet(){
-    if(currentNeed === "food"){
+    if(currentNeed === 'food'){
         hungerGifEl.style.visibility = 'hidden';
         plusScore();
     } else {
@@ -173,7 +174,7 @@ function foodNeedMet(){
     render()
 }
 function toyNeedMet(){
-    if(currentNeed === "a toy"){
+    if(currentNeed === 'a toy'){
         boredGifEl.style.visibility = 'hidden';
         plusScore();
     } else {
@@ -183,7 +184,7 @@ function toyNeedMet(){
 
 }
 function bedNeedMet(){
-    if(currentNeed === "a bed"){
+    if(currentNeed === 'a bed'){
         sleepGifEl.style.visibility = 'hidden';
         plusScore();
     } else {
@@ -192,7 +193,7 @@ function bedNeedMet(){
     render()
 }
 function coatNeedMet(){
-    if(currentNeed === "a coat"){
+    if(currentNeed === 'a coat'){
         snowGifEl.style.visibility = 'hidden';
         plusScore();
     } else {
@@ -201,7 +202,7 @@ function coatNeedMet(){
     render()
 }
 function fanNeedMet(){
-    if(currentNeed === "a fan"){
+    if(currentNeed === 'a fan'){
         fireGifEl.style.visibility = 'hidden';
         plusScore();
     } else {
@@ -210,11 +211,12 @@ function fanNeedMet(){
     render()
 }
 
-//X function
+//Function to show xs
 function showX() {
     xArray[xCount-1].style.visibility = 'visible';
 }
 
+//Function to reset the game
 function reset() {
     xCount = 0;
     score = 0;
@@ -233,19 +235,19 @@ function reset() {
     }
 }
 
-//render functions
-//winner function will show a gif of fireworks over screen
+
+//winner function
 function renderWinner(){
-    randomNeedEl.innerText = "";
+    randomNeedEl.innerText = '';
     reset();
     showYouWin();
     showFireworksGif();
     render()
 }
 
-//loss function will show gif of rip over screen
+//loss function
 function renderLoss(){
-    randomNeedEl.innerText = "";
+    randomNeedEl.innerText = '';
     reset();
     showYouLose();
     showRipGif();
